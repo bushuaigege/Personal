@@ -1,0 +1,24 @@
+.icon{padding: 2px 8px; background:url(../imgs/index/tabicons.png) no-repeat; }
+.icon-sys{ background:url(../imgs/index/directory.png) no-repeat;}
+.icon-set{background-position: -380px -200px;}
+.icon-log{background-position: -380px -80px;}
+.icon-starting{background-position: -100px -200px;}
+.icon-special{background-position: -60px -20px;}
+.icon-new{background-position:-60px -280px;}
+.icon-sorted{background-position:-300px -440px;}
+.icon-special{background-position:-180px -60px;}
+.icon-module{background-position:-220px -340px;}
+.icon-hot{background:url(../imgs/index/hot.png) no-repeat;}
+.icon-top{background:url(../imgs/index/top.png) no-repeat;}
+.icon-user{background-position:-100px -480px;}
+
+
+.threed{  margin: 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  text-rendering: optimizelegibility;font-size:18px;color:red;}
+  
+.icon-football{background-position:-280px -400px;}
+.icon-right{background-position:0px 0px;}
+.icon-error{background-position:-140px -120px;}

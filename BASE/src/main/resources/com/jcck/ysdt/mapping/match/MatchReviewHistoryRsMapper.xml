@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jcck.ysdt.mapper.match.MatchReviewHistoryRsMapper" >
+  <resultMap id="BaseResultMap" type="com.jcck.ysdt.model.match.MatchReviewHistoryRs" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="match_id" property="matchId" jdbcType="INTEGER" />
+    <result column="win" property="win" jdbcType="TINYINT" />
+    <result column="draw" property="draw" jdbcType="TINYINT" />
+    <result column="loss" property="loss" jdbcType="TINYINT" />
+    <result column="choiceness" property="choiceness" jdbcType="VARCHAR" />
+    <result column="up_handicap" property="upHandicap" jdbcType="TINYINT" />
+    <result column="go_handicap" property="goHandicap" jdbcType="TINYINT" />
+    <result column="down_handicap" property="downHandicap" jdbcType="TINYINT" />
+    <result column="type" property="type" jdbcType="TINYINT" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    id, match_id, win, draw, loss, choiceness, up_handicap, go_handicap, down_handicap, 
+    type, ctime
+  </sql>
+</mapper>

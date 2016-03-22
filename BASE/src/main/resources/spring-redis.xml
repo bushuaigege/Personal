@@ -1,0 +1,73 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:cache="http://www.springframework.org/schema/cache"
+  xmlns:c="http://www.springframework.org/schema/c"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+				      http://www.springframework.org/schema/beans/spring-beans.xsd
+				      http://www.springframework.org/schema/cache
+				      http://www.springframework.org/schema/cache/spring-cache.xsd">
+	
+	
+	<bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxIdle" value="300" />
+		<property name="maxWaitMillis" value="1000" />
+		<property name="testOnBorrow" value="true" />
+	</bean>
+	
+	<!-- jedis客户端连接工厂 p:password="qwer1234"-->
+	<bean id="jedisConnectionFactory"
+		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+		p:host-name="192.168.0.12" p:port="6379"  p:pool-config-ref="poolConfig"
+		p:database="0"/>
+
+	<!-- org.springframework.data.redis.core.StringRedisTemplate -->
+	
+	<!-- Redis Template -->
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+		<property name="connectionFactory" ref="jedisConnectionFactory" />
+
+		<!-- 如果不配置Serializer，那么存储的时候智能使用String，如果用User类型存储，那么会提示错误User can't cast to String！！！ -->
+		<property name="keySerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		</property>
+		
+		<property name="valueSerializer">
+			<bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+		</property>
+		
+		<property name="hashValueSerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+		</property>
+	
+		<property name="hashKeySerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		</property>  
+	</bean>
+	
+	<!-- spring自己的Cache管理器，这里定义了两个缓存位置名称 ，既注解中的value -->
+	<!-- <bean id="redisCacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+		<property name="caches">
+			<set>
+				<bean class="com.hk.ws.util.cache.RedisCache">
+					<property name="redisTemplate" ref="redisTemplate" />
+					<property name="name" value="default" />
+				</bean>
+			</set>
+		</property>
+	</bean> -->
+	
+	<!-- redis缓存管理器 -->
+	<!-- <bean id="redisCacheManager" class="org.springframework.data.redis.cache.RedisCacheManager"
+		c:template-ref="redisTemplate" /> -->
+
+	<!-- 自定义实现redisManager -->
+	<bean class="com.hk.ws.util.cache.RedisCache">
+		<property name="redisTemplate" ref="redisTemplate" />
+		<property name="name" value="default" />
+	</bean>
+				
+</beans>

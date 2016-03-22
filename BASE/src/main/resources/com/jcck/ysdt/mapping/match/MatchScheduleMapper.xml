@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jcck.ysdt.mapper.match.MatchScheduleMapper" >
+  <resultMap id="BaseResultMap" type="com.jcck.ysdt.model.match.MatchSchedule" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="match_order" property="matchOrder" jdbcType="INTEGER" />
+    <result column="schedule_id" property="scheduleId" jdbcType="INTEGER" />
+    <result column="match_time" property="matchTime" jdbcType="TIMESTAMP" />
+    <result column="league_cn_name" property="leagueCnName" jdbcType="VARCHAR" />
+    <result column="home_name" property="homeName" jdbcType="VARCHAR" />
+    <result column="away_name" property="awayName" jdbcType="VARCHAR" />
+    <result column="bgcolor" property="bgcolor" jdbcType="VARCHAR" />
+    <result column="handicap_number" property="handicapNumber" jdbcType="REAL" />
+    <result column="is_hot" property="isHot" jdbcType="INTEGER" />
+    <result column="is_top" property="isTop" jdbcType="INTEGER" />
+    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    id, match_order, schedule_id, match_time, league_cn_name, home_name, away_name, bgcolor, 
+    handicap_number, is_hot, is_top, ctime
+  </sql>
+  
+   <!-- 以下两个<cache>标签二选一,第一个可以输出日志,第二个不输出日志 -->  
+   <!-- <cache type="org.mybatis.caches.ehcache.LoggingEhcache" />   -->
+   <!-- <cache type="org.mybatis.caches.ehcache.EhcacheCache"/> --> 
+   
+   
+   
+</mapper>

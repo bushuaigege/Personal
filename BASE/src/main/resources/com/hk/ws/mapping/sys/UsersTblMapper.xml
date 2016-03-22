@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hk.ws.mapper.sys.UsersTblMapper" >
+  <resultMap id="BaseResultMap" type="com.hk.ws.model.sys.UsersTbl" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="Users_tbl_Id" property="usersTblId" jdbcType="VARCHAR" />
+    <result column="RealName" property="realname" jdbcType="VARCHAR" />
+    <result column="LoginName" property="loginname" jdbcType="VARCHAR" />
+    <result column="PassWord" property="password" jdbcType="VARCHAR" />
+    <result column="Description" property="description" jdbcType="VARCHAR" />
+    <result column="Phone" property="phone" jdbcType="VARCHAR" />
+    <result column="Email" property="email" jdbcType="VARCHAR" />
+    <result column="Isvalid" property="isvalid" jdbcType="BIT" />
+    <result column="FaceImg" property="faceimg" jdbcType="VARCHAR" />
+    <result column="IsDelete" property="isdelete" jdbcType="BIT" />
+    <result column="CreateUserId" property="createuserid" jdbcType="VARCHAR" />
+    <result column="CreateDateTime" property="createdatetime" jdbcType="TIMESTAMP" />
+    <result column="UpdateUserId" property="updateuserid" jdbcType="VARCHAR" />
+    <result column="UpdateDateTime" property="updatedatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    Users_tbl_Id, RealName, LoginName, PassWord, Description, Phone, Email, Isvalid, 
+    FaceImg, IsDelete, CreateUserId, CreateDateTime, UpdateUserId, UpdateDateTime
+  </sql>
+</mapper>

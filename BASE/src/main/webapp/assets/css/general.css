@@ -1,0 +1,28 @@
+a.ls {
+    display: inline-block;
+    float: left;
+    width: 82px;
+    overflow: hidden;
+    border-left: 1px solid #D3EFFF;
+    color: #FFF200;
+    height: 33px;
+    line-height: 33px;
+}
+.bold{
+	font-weight: bold;
+}
+
+.bolder{
+	font-weight: bolder;
+}
+a {
+    /* color: #004B91; */
+    text-decoration: none;
+    outline: none;
+}
+a:-webkit-any-link {
+    text-decoration: underline;
+    cursor: auto;
+    text-decoration: none;
+    outline: none;
+}
