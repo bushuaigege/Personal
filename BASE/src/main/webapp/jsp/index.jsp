@@ -75,7 +75,7 @@
 	<div id="mainPanle" style="background: #eee; overflow-y:hidden"	data-options="region:'center'">
 		<div id="tabs" class="easyui-tabs" data-options="border:false,fit:true">
 			<div title="欢迎使用" style="padding:20px;overflow:hidden; color:red; ">
-					<h1 style="font-weight: bolder">赢胜数据,扬帆起航!!!</h1>
+					<h1 style="font-weight: bolder">赢胜数据,扬帆起航!!!<%=new Date() %></h1>
 			</div>
 		</div>
 	</div>

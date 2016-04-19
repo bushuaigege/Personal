@@ -30,8 +30,8 @@
     </bean>
     
     <!-- 定义一个Ehcache -->
-    <bean id="matchCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
-       <property name="cacheName" value="matchCache"/>
+    <bean id="SimplePageCachingFilter" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+       <property name="cacheName" value="SimplePageCachingFilter"/>
        <property name="cacheManager" ref="ehcacheManagerFactory"/>
     </bean>
 </beans>

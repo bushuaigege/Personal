@@ -161,7 +161,7 @@
 	<!-- 注解方式配置事物 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<aop:aspectj-autoproxy/>
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
 	
 	<!-- 设置切面范围 -->
     <aop:config>

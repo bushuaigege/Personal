@@ -145,11 +145,18 @@
 		</dependency>
 
 		
-		<!-- ehcache缓存核心包 -->
+		<!-- ehcache对象/数据缓存核心包 -->
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache-core</artifactId>
 			<version>${ehcache.version}</version>
+		</dependency>
+		
+		<!-- ehcache页面缓存 -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-web</artifactId>
+			<version>2.0.4</version>
 		</dependency>
 
 	
@@ -254,6 +261,11 @@
 			<version>${jackson.version}</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+		</dependency>
 		
 		<!-- 文件上传 -->
 		<dependency>
