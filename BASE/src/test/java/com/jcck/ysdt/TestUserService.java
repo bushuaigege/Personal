@@ -48,5 +48,11 @@ public class TestUserService {
 		ConcurrentHashMap<String, String> conMap = new ConcurrentHashMap<String, String>();
 		conMap.put("a", "a");
 	}
+	
+	
+	@Test
+	public void JSRTest(){
+		
+	}
 
 }

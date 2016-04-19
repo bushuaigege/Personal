@@ -3,6 +3,7 @@
 	<name>BASE</name>
 	<comment></comment>
 	<projects>
+		<project>Java_WS</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

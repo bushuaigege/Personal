@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.*;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Table(name = "Users_tbl")
 public class UsersTbl implements Serializable{
     /** 
@@ -21,18 +25,21 @@ public class UsersTbl implements Serializable{
     /**
      * 用户姓名
      */
+    @NotEmpty(message="{realname.not.empty}")
     @Column(name = "RealName")
     private String realname;
 
     /**
      * 登录名
      */
+    @NotEmpty(message="{name.not.empty}")
     @Column(name = "LoginName")
     private String loginname;
 
     /**
      * 密码
      */
+    @NotEmpty(message="{password.not.empty}")
     @Column(name = "PassWord")
     private String password;
 
@@ -45,12 +52,14 @@ public class UsersTbl implements Serializable{
     /**
      * 联系电话
      */
+    @Length(max=11,min=11,message="{phone.not.correct}")
     @Column(name = "Phone")
     private String phone;
 
     /**
      * 邮箱
      */
+    @Email(message="{email.not.correct}")
     @Column(name = "Email")
     private String email;
 
